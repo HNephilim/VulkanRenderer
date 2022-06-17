@@ -28,17 +28,17 @@ int VulkanRenderer::Init(GLFWwindow* NewWindow)
         // Create a Mesh
         // VertexData
         std::vector<Vertex> MeshVertices = {
-                {.pos{-0.1, -0.4, 0.0},  .col{1.0, 0.0, 0.0}}, // V 0
+                {.pos{-0.1, -0.4, 0.0}, .col{1.0, 0.0, 0.0}}, // V 0
                 {.pos{-0.1, 0.4, 0.0},   .col{0.0, 1.0, 0.0}}, // V 1
                 {.pos{-0.9, 0.4, 0.0},  .col{0.0, 0.0, 1.0}}, // V 2
                 {.pos{-0.9, -0.4, 0.0}, .col{1.0, 1.0, 0.0}}, // V 3
         };
 
         std::vector<Vertex> MeshVertices2 = {
-                {.pos{0.9, -0.4, 0.0},  .col{1.0, 0.0, 0.0}}, // V 0
-                {.pos{0.9, 0.2, 0.0},   .col{0.0, 1.0, 0.0}}, // V 1
-                {.pos{0.1, 0.4, 0.0},  .col{0.0, 0.0, 1.0}}, // V 2
-                {.pos{0.1, -0.4, 0.0}, .col{1.0, 1.0, 0.0}}, // V 3
+                {.pos{0.8, -0.3, 0.0},  .col{1.0, 0.0, 0.0}}, // V 0
+                {.pos{0.9, 0.4, 0.0},   .col{0.0, 1.0, 0.0}}, // V 1
+                {.pos{0.1, 0.4, 0.0},   .col{0.0, 0.0, 1.0}}, // V 2
+                {.pos{0.2, -0.3, 0.0},  .col{1.0, 1.0, 0.0}}, // V 3
         };
 
         //Index Data
@@ -655,8 +655,8 @@ VkImageView VulkanRenderer::CreateImageView(VkImage Image, VkFormat Format, VkIm
 void VulkanRenderer::CreateGraphicsPipeline()
 {
     // Read in SPIV-V code of shaders
-    auto VertexShaderCode = ReadFile("E:/VulkanClassesLION/Shaders/vert.spv");
-    auto FragmentShaderCode = ReadFile("E:/VulkanClassesLION/Shaders/frag.spv");
+    auto VertexShaderCode = ReadFile("Shaders/vert.spv");
+    auto FragmentShaderCode = ReadFile("Shaders/frag.spv");
 
     //Build Shader Modules to link to Graphics Pipeline
     VkShaderModule VertexShaderModule = CreateShaderModule(VertexShaderCode);
